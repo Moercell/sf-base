@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 
 interface GameDataResponse {
-  receivedData: any; // Replace 'any' with the actual data type you expect
+  receivedData: any;
 }
 
 function GameData() {
-  const [data, setData] = useState<any | null>(null); // Replace 'any' with the actual data type you expect
+  const [data, setData] = useState<any | null>(null);
 
   useEffect(() => {
     // Fetch data from the API route you created
