@@ -1,4 +1,4 @@
-// pages/api/gameData.js
+// pages/api/data.js
 import Cors from 'cors';
 
 // Initialize the CORS middleware
@@ -13,12 +13,12 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     // Retrieve the data from the request body
-    const { itemData } = req.body;
+    const receivedString = req.body;
 
-    // You can process the itemData here as needed
+    // You can process the receivedString here as needed
 
-    // Send a response (for example, echoing the data)
-    res.status(200).json({ receivedData: itemData });
+    // Send the received string back in the response
+    res.status(200).send(receivedString);
   } else {
     res.status(405).json({ error: 'Method Not Allowed' });
   }

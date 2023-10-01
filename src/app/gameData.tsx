@@ -1,13 +1,10 @@
 'use client'
 
+// pages/gameData.tsx
 import { useState, useEffect } from 'react';
 
-interface GameDataResponse {
-  receivedData: any;
-}
-
 function GameData() {
-  const [data, setData] = useState<any | null>(null);
+  const [data, setData] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetch data from the API route you created
@@ -18,9 +15,9 @@ function GameData() {
         'Content-Type': 'application/json',
       },
     })
-      .then((response) => response.json() as Promise<GameDataResponse>)
+      .then((response) => response.text())
       .then((result) => {
-        setData(result.receivedData);
+        setData(result);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -31,7 +28,7 @@ function GameData() {
     <div>
       <h1>Game Data</h1>
       {data ? (
-        <pre>{JSON.stringify(data, null, 2)}</pre>
+        <p>{data}</p>
       ) : (
         <p>Loading data...</p>
       )}
