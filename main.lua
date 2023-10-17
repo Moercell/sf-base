@@ -32,7 +32,7 @@ function test1()
 end
 
 
-while true do
+-- while true do
     
-    cleanStorrage()
-end
+--     cleanStorrage()
+-- end
