@@ -31,5 +31,5 @@ end
 while true do
     
     cleanStorrage()
-
+    print('test')
 end
