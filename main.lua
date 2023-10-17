@@ -27,6 +27,10 @@ function cleanStorrage()
 
 end
 
+function test1()
+    print('test1')
+end
+
 
 while true do
     
