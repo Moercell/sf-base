@@ -28,12 +28,11 @@ function cleanStorrage()
 end
 
 function test1()
-    print('test1')
+    return 'test123'
 end
 
 
 while true do
     
     cleanStorrage()
-    print('test')
 end
